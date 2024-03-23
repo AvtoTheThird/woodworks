@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "TBCContractica-Black";
+  src: url("../public/contractica-fonts/TBCContractica-Black.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "TBCContractica-Bold";
+  src: url("../public/contractica-fonts/TBCContractica-Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "TBCContractica-Light";
+  src: url("../public/contractica-fonts/TBCContractica-Light.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "TBCContractica-Medium";
+  src: url("../public/contractica-fonts/TBCContractica-Medium.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "TBCContractica-Regular";
+  src: url("../public/contractica-fonts/TBCContractica-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "TBCContracticaCAPS-Black";
+  src: url("../public/contractica-fonts/TBCContractica-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "TBCContracticaCAPS-Bold";
+  src: url("../public/contractica-fonts/TBCContracticaCAPS-Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "TBCContracticaCAPS-Light";
+  src: url("../public/contractica-fonts/TBCContracticaCAPS-Light.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "TBCContracticaCAPS-Medium";
+  src: url("../public/contractica-fonts/TBCContracticaCAPS-Medium.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "TBCContracticaCAPS-Regular";
+  src: url("../public/contractica-fonts/TBCContracticaCAPS-Regular.ttf")
+    format("truetype");
+}
