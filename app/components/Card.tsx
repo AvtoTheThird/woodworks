@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 const Card = () => {
+  const data = "bruh";
   return (
     <div className="flex flex-col justify-between rounded-lg px-3 py-2 m-2 hover:shadow-lg w-[300px] font-contractica-light bg-slate-200 ">
       <img
@@ -18,7 +19,11 @@ const Card = () => {
           <h4>ფასი: 50₾</h4>
         </div>
         <button className="p-3 h-10 w-14 text-white rounded-md bg-slate-500 ">
-          <Link href="/product">მეტი</Link>
+          <Link
+            href={{ pathname: "/product", query: { saxeli: "data", id: "1" } }}
+          >
+            მეტი
+          </Link>
         </button>
       </div>
     </div>
