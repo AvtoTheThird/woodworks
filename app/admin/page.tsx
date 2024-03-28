@@ -25,7 +25,7 @@ const initialFormData: ProductFormData = {
 };
 
 const ProductForm: React.FC = () => {
-  const [imageUrls, setImageUrls] = useState([]);
+  // const [imageUrls, setImageUrls] = useState([]);
 
   const [formData, setFormData] = useState<ProductFormData>(initialFormData);
 
@@ -47,11 +47,11 @@ const ProductForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData.photos);
+
+    // console.log(formData.photos);
     try {
       const Urls = formData.photos ? await uploadImages(formData.photos) : [];
-      console.log(Urls);
-
+      // console.log(Urls);
       const docRef =
         Urls.length > 0
           ? await addDoc(collection(db, "products"), {
@@ -66,18 +66,21 @@ const ProductForm: React.FC = () => {
   };
 
   const uploadImages = async (files: FileList) => {
+    const imageUrls: string[] = [];
     for (const file of Array.from(files)) {
       const imageRef = ref(storage, `product-images/${file.name}`);
-      uploadBytes(imageRef, file).then((snapshot) => {
-        getDownloadURL(snapshot.ref).then((url) => {
-          setImageUrls((prev): any => [...prev, url]);
+      await uploadBytes(imageRef, file).then(async (snapshot) => {
+        await getDownloadURL(snapshot.ref).then((url) => {
+          // console.log(url);
+          imageUrls.push(url);
+          // setImageUrls((prev): any => [...prev, url]);
         });
       });
     }
-    console.log(imageUrls);
 
     return imageUrls;
   };
+  // console.log(imageUrls);
 
   return (
     <div className="max-w-md mx-auto">

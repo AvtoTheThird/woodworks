@@ -12,12 +12,15 @@ interface Product {
   };
 }
 const Card = (props: Product) => {
-  const data = "bruh";
   console.log(props);
 
   return (
     <div className="flex flex-col justify-between rounded-lg px-3 py-2 m-2 hover:shadow-lg w-[300px] font-contractica-light bg-slate-200 ">
-      <img className="" src={props.data.photos[0]} alt="" />
+      <img
+        className="h-[200px] object-cover"
+        src={props.data?.photos[0]}
+        alt=""
+      />
       <div className="flex justify-between items-center">
         <div>
           <h3 className="text-lg font-semibold text-gray-800 mb-2 my-2">
@@ -30,7 +33,15 @@ const Card = (props: Product) => {
           <Link
             href={{
               pathname: "/product",
-              query: { saxeli: props.data.productName, id: "1" },
+              query: {
+                id: props.data.id,
+                productName: props.data.productName,
+                material: props.data.material,
+                price: props.data.price,
+                description: props.data.description,
+                availability: props.data.availability,
+                photos: props.data.photos,
+              },
             }}
           >
             მეტი

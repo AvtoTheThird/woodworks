@@ -1,15 +1,19 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
-
-const ImageSelector = () => {
+import React, { useEffect, useState } from "react";
+interface photos {
+  [image: string]: string;
+}
+const ImageSelector = (props: { photos: { [key: string]: string } }) => {
   const [img, setImg] = useState("");
+  const [images, setImages] = useState<string[]>([]);
 
-  const images = [
-    "https://m.media-amazon.com/images/I/81BZnztxcAL._AC_SX679_.jpg",
-    "https://m.media-amazon.com/images/I/81oahklHLYL._AC_SX679_.jpg",
-    "https://m.media-amazon.com/images/I/91jCXSyjk6L._AC_SX679_.jpg",
-  ];
+  useEffect(() => {
+    const imageValues = Object.values(props.photos);
+    setImages(imageValues);
+  }, []);
+
+  // console.log(images);
 
   const handleMouseOver = (index: number) => {
     console.log(index);
