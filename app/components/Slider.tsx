@@ -36,7 +36,7 @@ const ImageCarousel = () => {
   };
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden py-5">
       <Slider {...settings}>
         <div>
           <img

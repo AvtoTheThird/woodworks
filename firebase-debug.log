@@ -1,0 +1,181 @@
+[debug] [2024-05-09T17:23:39.113Z] ----------------------------------------------------------------------
+[debug] [2024-05-09T17:23:39.117Z] Command:       D:\node\node.exe C:\Users\avton\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-05-09T17:23:39.118Z] CLI Version:   13.6.0
+[debug] [2024-05-09T17:23:39.118Z] Platform:      win32
+[debug] [2024-05-09T17:23:39.119Z] Node Version:  v18.18.2
+[debug] [2024-05-09T17:23:39.120Z] Time:          Thu May 09 2024 10:23:39 GMT-0700 (Pacific Daylight Time)
+[debug] [2024-05-09T17:23:39.121Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-09T17:23:39.126Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-05-09T17:23:39.336Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-09T17:23:39.337Z] > authorizing via signed-in user (avtonariashvili@gmail.com)
+[debug] [2024-05-09T17:23:39.337Z] [iam] checking project woodworks-fcc60 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-09T17:23:39.339Z] > refreshing access token with scopes: []
+[debug] [2024-05-09T17:23:39.341Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-05-09T17:23:39.341Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-09T17:23:40.104Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-05-09T17:23:40.105Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-05-09T17:23:40.585Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-05-09T17:23:40.586Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-09T17:23:40.613Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions [none]
+[debug] [2024-05-09T17:23:40.613Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions x-goog-quota-user=projects/woodworks-fcc60
+[debug] [2024-05-09T17:23:40.613Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-09T17:23:42.245Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions 200
+[debug] [2024-05-09T17:23:42.245Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-09T17:23:42.247Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/woodworks-fcc60 [none]
+[debug] [2024-05-09T17:23:43.004Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/woodworks-fcc60 200
+[debug] [2024-05-09T17:23:43.005Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/woodworks-fcc60 {"projectId":"woodworks-fcc60","projectNumber":"953292624678","displayName":"woodworks","name":"projects/woodworks-fcc60","resources":{"hostingSite":"woodworks-fcc60","storageBucket":"woodworks-fcc60.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_43026c8e-025d-4ec0-8bf7-5637c1039dc3"}
+[debug] [2024-05-09T17:24:07.711Z] SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at findDependency (C:\Users\avton\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
+    at getAstroVersion (C:\Users\avton\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\astro\utils.js:39:45)
+    at discover (C:\Users\avton\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\astro\index.js:17:49)
+    at discover (C:\Users\avton\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:47:38)
+    at async prepareFrameworks (C:\Users\avton\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:192:25)
+    at async deploy (C:\Users\avton\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-05-09T17:34:25.865Z] ----------------------------------------------------------------------
+[debug] [2024-05-09T17:34:25.873Z] Command:       D:\node\node.exe C:\Users\avton\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-05-09T17:34:25.875Z] CLI Version:   13.8.1
+[debug] [2024-05-09T17:34:25.876Z] Platform:      win32
+[debug] [2024-05-09T17:34:25.877Z] Node Version:  v18.18.2
+[debug] [2024-05-09T17:34:25.880Z] Time:          Thu May 09 2024 10:34:25 GMT-0700 (Pacific Daylight Time)
+[debug] [2024-05-09T17:34:25.881Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-09T17:34:26.045Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-09T17:34:26.046Z] > authorizing via signed-in user (avtonariashvili@gmail.com)
+[debug] [2024-05-09T17:34:26.046Z] [iam] checking project woodworks-fcc60 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-09T17:34:26.050Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions [none]
+[debug] [2024-05-09T17:34:26.050Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions x-goog-quota-user=projects/woodworks-fcc60
+[debug] [2024-05-09T17:34:26.051Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-09T17:34:27.282Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions 200
+[debug] [2024-05-09T17:34:27.283Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-09T17:34:27.285Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/woodworks-fcc60 [none]
+[debug] [2024-05-09T17:34:27.740Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/woodworks-fcc60 200
+[debug] [2024-05-09T17:34:27.740Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/woodworks-fcc60 {"projectId":"woodworks-fcc60","projectNumber":"953292624678","displayName":"woodworks","name":"projects/woodworks-fcc60","resources":{"hostingSite":"woodworks-fcc60","storageBucket":"woodworks-fcc60.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_43026c8e-025d-4ec0-8bf7-5637c1039dc3"}
+[debug] [2024-05-09T17:34:34.905Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites pageToken=&pageSize=10
+[debug] [2024-05-09T17:34:36.181Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites 200
+[debug] [2024-05-09T17:34:36.181Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites {"sites":[{"name":"projects/woodworks-fcc60/sites/woodworks-fcc60","defaultUrl":"https://woodworks-fcc60.web.app","appId":"1:953292624678:web:36a4f8caeee8d1d25427e7","type":"DEFAULT_SITE"}]}
+[debug] [2024-05-09T17:34:36.183Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:953292624678:web:36a4f8caeee8d1d25427e7/config [none]
+[debug] [2024-05-09T17:34:36.980Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:953292624678:web:36a4f8caeee8d1d25427e7/config 200
+[debug] [2024-05-09T17:34:36.980Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:953292624678:web:36a4f8caeee8d1d25427e7/config {"projectId":"woodworks-fcc60","appId":"1:953292624678:web:36a4f8caeee8d1d25427e7","storageBucket":"woodworks-fcc60.appspot.com","locationId":"europe-west","apiKey":"AIzaSyCIN5ridep7sgocPR-hn1P0iDdpmY2iYcI","authDomain":"woodworks-fcc60.firebaseapp.com","messagingSenderId":"953292624678","measurementId":"G-2TP1BNNGT7"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-05-09T17:34:53.354Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites/woodworks-fcc60 [none]
+[debug] [2024-05-09T17:34:54.676Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites/woodworks-fcc60 200
+[debug] [2024-05-09T17:34:54.676Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites/woodworks-fcc60 {"name":"projects/woodworks-fcc60/sites/woodworks-fcc60","defaultUrl":"https://woodworks-fcc60.web.app","appId":"1:953292624678:web:36a4f8caeee8d1d25427e7","type":"DEFAULT_SITE"}
+[info]  ⚠ Invalid next.config.js options detected: 
+
+[info]  ⚠     Unrecognized key(s) in object: 'rules'
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+
+[info]    ▲ Next.js 14.1.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+Failed to compile.
+
+[info] 
+./app/components/ImageSelector.tsx
+14:6  Warning: React Hook useEffect has a missing dependency: 'props.photos'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./app/contact/page.tsx
+17:24  Error: React Hook "useJsApiLoader" is called in function "page" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use".  react-hooks/rules-of-hooks
+21:25  Error: React Hook "React.useState" is called in function "page" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use".  react-hooks/rules-of-hooks
+23:18  Error: React Hook "React.useCallback" is called in function "page" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use".  react-hooks/rules-of-hooks
+31:21  Error: React Hook "React.useCallback" is called in function "page" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use".  react-hooks/rules-of-hooks
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[debug] [2024-05-09T17:36:28.008Z] Error: ENOENT: no such file or directory, open 'C:\Users\avton\Desktop\woodworks\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-05-09T17:41:22.646Z] ----------------------------------------------------------------------
+[debug] [2024-05-09T17:41:22.649Z] Command:       D:\node\node.exe C:\Users\avton\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-05-09T17:41:22.650Z] CLI Version:   13.8.1
+[debug] [2024-05-09T17:41:22.651Z] Platform:      win32
+[debug] [2024-05-09T17:41:22.651Z] Node Version:  v18.18.2
+[debug] [2024-05-09T17:41:22.653Z] Time:          Thu May 09 2024 10:41:22 GMT-0700 (Pacific Daylight Time)
+[debug] [2024-05-09T17:41:22.653Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-09T17:41:22.804Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-09T17:41:22.805Z] > authorizing via signed-in user (avtonariashvili@gmail.com)
+[debug] [2024-05-09T17:41:22.805Z] [iam] checking project woodworks-fcc60 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-09T17:41:22.810Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions [none]
+[debug] [2024-05-09T17:41:22.810Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions x-goog-quota-user=projects/woodworks-fcc60
+[debug] [2024-05-09T17:41:22.810Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-09T17:41:23.973Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions 200
+[debug] [2024-05-09T17:41:23.973Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/woodworks-fcc60:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-09T17:41:23.975Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/woodworks-fcc60 [none]
+[debug] [2024-05-09T17:41:24.407Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/woodworks-fcc60 200
+[debug] [2024-05-09T17:41:24.407Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/woodworks-fcc60 {"projectId":"woodworks-fcc60","projectNumber":"953292624678","displayName":"woodworks","name":"projects/woodworks-fcc60","resources":{"hostingSite":"woodworks-fcc60","storageBucket":"woodworks-fcc60.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_43026c8e-025d-4ec0-8bf7-5637c1039dc3"}
+[debug] [2024-05-09T17:41:31.545Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites pageToken=&pageSize=10
+[debug] [2024-05-09T17:41:33.134Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites 200
+[debug] [2024-05-09T17:41:33.135Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites {"sites":[{"name":"projects/woodworks-fcc60/sites/woodworks-fcc60","defaultUrl":"https://woodworks-fcc60.web.app","appId":"1:953292624678:web:36a4f8caeee8d1d25427e7","type":"DEFAULT_SITE"}]}
+[debug] [2024-05-09T17:41:33.135Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:953292624678:web:36a4f8caeee8d1d25427e7/config [none]
+[debug] [2024-05-09T17:41:34.252Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:953292624678:web:36a4f8caeee8d1d25427e7/config 200
+[debug] [2024-05-09T17:41:34.252Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:953292624678:web:36a4f8caeee8d1d25427e7/config {"projectId":"woodworks-fcc60","appId":"1:953292624678:web:36a4f8caeee8d1d25427e7","storageBucket":"woodworks-fcc60.appspot.com","locationId":"europe-west","apiKey":"AIzaSyCIN5ridep7sgocPR-hn1P0iDdpmY2iYcI","authDomain":"woodworks-fcc60.firebaseapp.com","messagingSenderId":"953292624678","measurementId":"G-2TP1BNNGT7"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-05-09T17:41:51.171Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites/woodworks-fcc60 [none]
+[debug] [2024-05-09T17:41:52.512Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites/woodworks-fcc60 200
+[debug] [2024-05-09T17:41:52.513Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/woodworks-fcc60/sites/woodworks-fcc60 {"name":"projects/woodworks-fcc60/sites/woodworks-fcc60","defaultUrl":"https://woodworks-fcc60.web.app","appId":"1:953292624678:web:36a4f8caeee8d1d25427e7","type":"DEFAULT_SITE"}
+[info]  ⚠ Invalid next.config.js options detected: 
+
+[info]  ⚠     Unrecognized key(s) in object: 'rules'
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+
+[info]    ▲ Next.js 14.1.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+Failed to compile.
+
+[info] 
+./app/components/ImageSelector.tsx
+14:6  Warning: React Hook useEffect has a missing dependency: 'props.photos'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./app/contact/page.tsx
+17:24  Error: React Hook "useJsApiLoader" is called in function "page" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use".  react-hooks/rules-of-hooks
+21:25  Error: React Hook "React.useState" is called in function "page" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use".  react-hooks/rules-of-hooks
+23:18  Error: React Hook "React.useCallback" is called in function "page" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use".  react-hooks/rules-of-hooks
+31:21  Error: React Hook "React.useCallback" is called in function "page" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use".  react-hooks/rules-of-hooks
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[debug] [2024-05-09T17:42:11.466Z] Error: ENOENT: no such file or directory, open 'C:\Users\avton\Desktop\woodworks\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
