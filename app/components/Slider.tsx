@@ -8,11 +8,11 @@ import "slick-carousel/slick/slick-theme.css";
 const ImageCarousel = () => {
   const settings = {
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 1024,

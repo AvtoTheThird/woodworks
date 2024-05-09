@@ -1,6 +1,5 @@
-import Image from "next/image";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import GoToStoreButton from "./components/GoToStoreButton";
 import Slider from "./components/Slider";
 import Link from "next/link";
 export default function Home() {
@@ -14,13 +13,14 @@ export default function Home() {
           alt=""
         />
         <div className="absolute inset-0 flex justify-center items-center flex-col ">
-          <div className="bg-slate-300 p-4 rounded-lg w-full text-center bg-opacity-70">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 font-contractica-medium">
-              ხელნაკეთი ხის რაღაცეების მაღაზია
+          <div className="bg-slate-300 flex justify-center items-center flex-col h-[190px] p-4 rounded-lg w-full text-center bg-opacity-50">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900   font-contractica-medium">
+              ხის ხელნაკეთი ნივთების ონლაინ მაღაზია
             </h1>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 leading-snug mb-4 font-contractica-medium">
-              ნჩარხი key words key words key words
-            </h2>
+            {/* <h2 className="text-2xl md:text-3xl lg:w-[1200px] lg:text-3xl font-semibold text-gray-800 leading-snug mb-4 font-contractica-medium">
+                მაღალი ხარისხის ხისგან დამზადებული ჩვენი პროდუქცია არა მხოლოდ
+                ფუნქციონალურია, არამედ ასახავს მასალის ბუნებრივ სილამაზეს
+              </h2> */}
           </div>
           <Link
             href="/store"
@@ -30,10 +30,14 @@ export default function Home() {
           </Link>{" "}
         </div>
       </section>
-      <div className="flex flex-col items-center justify-center h-96 bg-gray-700 w-full">
-        <h3> aqac rame daiweros</h3>
+      <div className="flex flex-col items-center justify-center h-52 bg-gray-700 w-full">
+        <h2 className="text-2xl md:text-3xl lg:w-[1200px] lg:text-3xl font-semibold text-white text-center leading-snug mb-4 font-contractica-medium">
+          მაღალი ხარისხის ხისგან დამზადებული ჩვენი პროდუქცია არა მხოლოდ
+          ფუნქციონალურია, არამედ ასახავს მასალის ბუნებრივ სილამაზეს
+        </h2>
       </div>
       <Slider />
+      <Footer />
     </main>
   );
 }

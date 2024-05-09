@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-
 import Navbar from "../components/Navbar";
 import ImageSelector from "../components/ImageSelector";
+import Footer from "../components/Footer";
 const productDetails = ({
   searchParams,
 }: {
@@ -38,6 +38,7 @@ const productDetails = ({
           </p>
         </div>
       </div>
+      <Footer />
     </main>
   );
 };

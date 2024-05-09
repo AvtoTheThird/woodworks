@@ -83,7 +83,7 @@ const ProductForm: React.FC = () => {
   // console.log(imageUrls);
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-md mx-auto ">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="productName" className="block mb-1">

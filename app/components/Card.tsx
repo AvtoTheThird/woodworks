@@ -12,8 +12,6 @@ interface Product {
   };
 }
 const Card = (props: Product) => {
-  console.log(props);
-
   return (
     <div className="flex flex-col justify-between rounded-lg px-3 py-2 m-2 hover:shadow-lg w-[300px] font-contractica-light bg-slate-200 ">
       <img
