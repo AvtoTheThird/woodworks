@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+  distDir: ".next",
 };
-module.exports = nextConfig;
+
 module.exports = {
+  ...nextConfig, // Merge the nextConfig object with the module.exports object
   images: {
     domains: ["www.woodenearth.com"],
     remotePatterns: [
@@ -13,10 +15,5 @@ module.exports = {
         pathname: "**",
       },
     ], // Add your hostname here
-  },
-  rules: {
-    "@next/next/no-img-element": "off", // Disable the rule that requires width and height for <Image>
-    "react-hooks/rules-of-hooks": "off", // Disable the rule that enforces hook rules
-    "react-hooks/exhaustive-deps": "off", // Disable the rule that enforces exhaustive dependencies
   },
 };

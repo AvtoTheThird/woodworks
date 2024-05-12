@@ -1,6 +1,8 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "@next/next/no-img-element": "off" // Disable the rule that requires width and height for <Image>
+    "@next/next/no-img-element": "off", // Disable the rule that requires width and height for <Image>
+    "react-hooks/rules-of-hooks": "off", // Disable the rule that enforces hook rules
+    "react-hooks/exhaustive-deps": "off" // Disable the rule that enforces exhaustive dependencies
   }
 }

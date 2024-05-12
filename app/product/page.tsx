@@ -20,6 +20,8 @@ const productDetails = ({
 
   return (
     <main className="flex  flex-col items-center justify-between ">
+      <title>მაღაზია</title>
+
       <Navbar />
       <div className="z-10 lg:w-4/6  w-5/6 flex-row justify-left font-mono text-sm lg:flex  bg-gray-100 rounded-md">
         <ImageSelector photos={searchParams.photos} />

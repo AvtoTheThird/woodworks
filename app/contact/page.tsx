@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
@@ -8,12 +8,37 @@ const containerStyle = {
   width: "400px",
   height: "400px",
 };
-
+const containerStyleSmall = {
+  width: "100%",
+  height: "400px",
+};
 const center = {
   lat: 41.99270248413086,
   lng: 44.11552047729492,
 };
 function page() {
+  const [viewportWidth, setViewportWidth] = useState(0);
+
+  useEffect(() => {
+    // Check if window object exists (ensures code runs only in client-side)
+    if (typeof window !== "undefined") {
+      // Accessing window object is safe here
+      setViewportWidth(window.innerWidth);
+
+      // Add event listener for window resize
+      const handleResize = () => {
+        setViewportWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      // Clean up the event listener on component unmount
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: "AIzaSyCIN5ridep7sgocPR-hn1P0iDdpmY2iYcI",
@@ -33,11 +58,13 @@ function page() {
   }, []);
   return (
     <main className="flex flex-col items-center justify-between h-screen">
+      <title>კონტაქტი</title>
+
       <Navbar />
 
-      <div className="text-gray-800 z-10 lg:w-4/6 w-5/6 items-center justify-evenly font-mono text-sm lg:flex h-full bg-gray-100 rounded-md ">
+      <div className="text-gray-800 z-10 lg:w-4/6 w-5/6 items-center h-auto justify-evenly font-mono text-sm lg:flex lg:h-full bg-gray-100 rounded-md ">
         <div className="py-6 flex flex-col justify-center items-center gap-10">
-          <div className=" flex justify-left items-center w-[350px] h-24 bg-slate-200 rounded-md text-lg px-5 gap-3">
+          <div className=" flex lg:flex-row flex-col justify-left items-center lg:w-[350px] w-[300px] h-24 bg-slate-200 rounded-md text-lg px-5 gap-3">
             <Image
               src="/phone.png" // path to your image in the public directory
               alt="Example Image"
@@ -46,7 +73,7 @@ function page() {
             />
             <span className="font-contractica-bold"> +995 568 45 54 60</span>
           </div>
-          <div className=" flex justify-left items-center w-[350px] h-24 bg-slate-200 rounded-md text-lg px-5 gap-3">
+          <div className=" flex lg:flex-row flex-col justify-left items-center lg:w-[350px] w-[300px] h-24 bg-slate-200 rounded-md text-lg px-5 gap-3">
             <Image
               src="/gmail.png" // path to your image in the public directory
               alt="Example Image"
@@ -57,7 +84,7 @@ function page() {
               xoncha.business@gmail.com
             </span>
           </div>
-          <div className=" flex justify-left items-center w-[350px] h-24 bg-slate-200 rounded-md text-lg px-5 gap-3">
+          <div className=" flex lg:flex-row flex-col justify-left items-center lg:w-[350px] w-[300px] h-24 bg-slate-200 rounded-md text-lg px-5 gap-3">
             <Image
               src="/location.png" // path to your image in the public directory
               alt="Example Image"
@@ -72,9 +99,11 @@ function page() {
         <div className=" p-6">
           {isLoaded ? (
             <GoogleMap
-              mapContainerStyle={containerStyle}
+              mapContainerStyle={
+                viewportWidth > 768 ? containerStyle : containerStyleSmall
+              }
               center={center}
-              zoom={1}
+              zoom={0}
               onLoad={onLoad}
               onUnmount={onUnmount}
             >
