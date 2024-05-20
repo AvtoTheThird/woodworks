@@ -4,54 +4,31 @@ import Footer from "../components/Footer";
 
 const about = () => {
   return (
-    <div>
+    <div className="flex flex-col  items-center h-screen">
       <title>ჩვენს შესახებ</title>
 
       <Navbar />
       <div className="flex justify-center flex-col items-center">
-        <div className="z-10 lg:w-4/6 w-5/6 items-center justify-between font-mono text-sm lg:flex flex-wrap bg-gray-100 rounded-md p-6">
+        <div className="z-10 lg:w-4/6 w-5/6 lg:h-[50vh]  font-mono text-sm flex flex-col justify-center gap-5 bg-gray-100 rounded-md p-6">
           <span className="text-xl font-bold font-contractica-medium">
-            კითხვა???
+            ჩვენს შესახებ
           </span>
-          <span className="text-base font-contractica-regular  block ">
-            პასუხიპას უხიპას ხიპასუხიპას უხიპასუხიპასუხი პასუხიპ ასუხიპასუხი
-            პასუხიპასუხიპასუხიპასუხი პასუხიპასუხი პასუხი პასუხი პასუხიპასუხი
-            პასუხი პასუხიპასუხი პასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხი
-            პასუხი პასუხი პასუხიპასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხი
-            პასუხიპასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხიპასუხი
-            პასუხიპასუხი პასუხი პასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხი
-            პასუხიპასუხი პასუხი პასუხიპასუხი პასუხი პასუხი პასუხი პასუხიპასუხი
-            პასუხი პასუხი პასუხი
-          </span>
-        </div>
-        <div className="z-10 lg:w-4/6 w-5/6 items-center justify-between font-mono text-sm lg:flex flex-wrap bg-gray-100 rounded-md p-6">
-          <span className="text-xl font-bold font-contractica-medium">
-            კითხვა???
-          </span>
-          <span className="text-base font-contractica-regular">
-            პასუხიპას უხიპას ხიპასუხიპას უხიპასუხიპასუხი პასუხიპ ასუხიპასუხი
-            პასუხიპასუხიპასუხიპასუხი პასუხიპასუხი პასუხი პასუხი პასუხიპასუხი
-            პასუხი პასუხიპასუხი პასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხი
-            პასუხი პასუხი პასუხიპასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხი
-            პასუხიპასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხიპასუხი
-            პასუხიპასუხი პასუხი პასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხი
-            პასუხიპასუხი პასუხი პასუხიპასუხი პასუხი პასუხი პასუხი პასუხიპასუხი
-            პასუხი პასუხი პასუხი
-          </span>
-        </div>
-        <div className="z-10 lg:w-4/6 w-5/6 items-center justify-between font-mono text-sm lg:flex flex-wrap bg-gray-100 rounded-md p-6">
-          <span className="text-xl font-bold font-contractica-medium">
-            კითხვა???
-          </span>
-          <span className="text-base font-contractica-regular">
-            პასუხიპას უხიპას ხიპასუხიპას უხიპასუხიპასუხი პასუხიპ ასუხიპასუხი
-            პასუხიპასუხიპასუხიპასუხი პასუხიპასუხი პასუხი პასუხი პასუხიპასუხი
-            პასუხი პასუხიპასუხი პასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხი
-            პასუხი პასუხი პასუხიპასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხი
-            პასუხიპასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხიპასუხი
-            პასუხიპასუხი პასუხი პასუხი პასუხიპასუხი პასუხიპასუხი პასუხი პასუხი
-            პასუხიპასუხი პასუხი პასუხიპასუხი პასუხი პასუხი პასუხი პასუხიპასუხი
-            პასუხი პასუხი პასუხი
+          <span className="text-base font-contractica-regular text-center  block ">
+            ხის ხელნაკეთი ნივთების ონლაინ მაღაზია. მაღაზია ფუნქციონირებს გორში.
+            ჩვენთან შეგიძლიათ შეიძინოთ სხვა და სხვა ხმელი ხის მასალისგან
+            დამზადებული ნებისმიერი ძველი ქართული ტრადიციული ხის ჭურჭელი. ასევე
+            დეკორატიული ნივთები ინტერიერის, ბუხრის ოთახის, სარდაფის მოსაწყობად.
+            შეგიძლიათ შეგვიკვეთოთ ნებისმერი ფორმის და დიზაინის ნივთი რომლის
+            დამზადება შესაძლებელი ხელით და/ან სახარატო დაზგის მეშვეობით.
+            მიწოდება გორში უფასოა შეკვეთიდან 5 სამუშაო დღეში. შესაკვრთად
+            გადმოდით{" "}
+            <a
+              target="_blank"
+              className="text-blue-500"
+              href="https://www.facebook.com/profile.php?id=61558711873128"
+            >
+              ლინკზე
+            </a>
           </span>
         </div>
       </div>

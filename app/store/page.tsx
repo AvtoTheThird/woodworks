@@ -5,6 +5,7 @@ import Card from "../components/Card";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Footer from "../components/Footer";
+import { log } from "console";
 interface Product {
   id: string;
   productName: string;
@@ -46,7 +47,7 @@ const Store = () => {
     <main className="flex flex-col items-center justify-start ">
       <Navbar />
 
-      <div className="z-10 lg:w-4/6 w-5/6 items-start justify-between font-mono text-sm lg:flex flex-wrap bg-gray-100 rounded-md  h-screen">
+      <div className="z-10 lg:w-4/6 w-5/6 items-start justify-between  text-sm lg:flex flex-wrap bg-gray-100 rounded-md  ">
         {products.map((prod, index) => {
           return <Card data={prod} key={index} />;
         })}

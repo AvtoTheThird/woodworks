@@ -15,7 +15,7 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <div className="flex space-x-10 items-center">
+        <div className="flex space-x-10 items-center text-center">
           <Link href="/store">მაღაზია</Link>
           <Link href="/about">ჩვენს შესახებ</Link>
           <Link href="/contact">კონტაქტი</Link>
