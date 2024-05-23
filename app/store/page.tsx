@@ -5,7 +5,6 @@ import Card from "../components/Card";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Footer from "../components/Footer";
-import { log } from "console";
 interface Product {
   id: string;
   productName: string;

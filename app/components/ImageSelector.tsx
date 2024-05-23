@@ -9,14 +9,14 @@ const ImageSelector = (props: { photos: { [key: string]: string } }) => {
   const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
-    const imageValues = Object.values(props.photos);
+    const imageValues = Object?.values(props.photos);
     setImages(imageValues);
   }, []);
 
   // console.log(images);
 
   const handleMouseOver = (index: number) => {
-    console.log(index);
+    // console.log(index);
     setImg(images[index]);
   };
 

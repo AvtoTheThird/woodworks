@@ -16,7 +16,7 @@ const Card = (props: Product) => {
   return (
     <Link
       href={{
-        pathname: "/product",
+        pathname: "/productedit",
         query: {
           id: props.data.id,
           productName: props.data.productName,
@@ -42,8 +42,8 @@ const Card = (props: Product) => {
             <h4>მასალა: {props.data.material}</h4> <hr />
             <h4>ფასი: {props.data.price}₾</h4>
           </div>
-          <button className="p-3 h-10 w-14 text-white rounded-md bg-slate-500 ">
-            <button>მეტი</button>
+          <button className=" h-10 w-20 text-white rounded-md bg-slate-500 ">
+            <button>ჩასწორება</button>
           </button>
         </div>
       </div>

@@ -5,10 +5,12 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { storage } from "../firebase";
+import { nanoid } from "nanoid";
 interface ProductFormData {
   productName: string;
   material: string;
   price: string;
+  id: string;
   description: string;
   availability: number | "";
   photos: FileList | null;
@@ -18,6 +20,7 @@ const initialFormData: ProductFormData = {
   productName: "",
   material: "",
   price: "",
+  id: "",
   description: "",
   availability: "",
   photos: null,
@@ -56,6 +59,7 @@ const ProductForm: React.FC = () => {
           ? await addDoc(collection(db, "products"), {
               ...formData,
               photos: Urls,
+              id: nanoid(10),
             })
           : null;
     } catch (error) {
