@@ -11,7 +11,7 @@ interface Product {
   material: string;
   price: string;
   description: string;
-  availability: number;
+  sort: number | "";
   photos: string[];
 }
 async function getProducts() {
@@ -25,7 +25,7 @@ async function getProducts() {
       description: doc.data().description,
       id: doc.data().id,
       price: doc.data().price,
-      availability: doc.data().availability,
+      sort: doc.data().sort,
       photos: doc.data().photos,
     });
   });
@@ -38,7 +38,16 @@ const Store = () => {
   useEffect(() => {
     async function fetchData() {
       const fetchedProducts = await getProducts();
-      setProducts(fetchedProducts);
+      const sortedProducts = fetchedProducts.sort((a, b) => {
+        if (a.sort < b.sort) {
+          return -1;
+        }
+        if (a.sort > b.sort) {
+          return 1;
+        }
+        return 0;
+      });
+      setProducts(sortedProducts);
     }
     fetchData();
   }, []);

@@ -7,7 +7,7 @@ interface Product {
     material: string;
     price: string;
     description: string;
-    availability: number;
+    sort: number | "";
     photos: string[];
   };
 }
@@ -23,7 +23,7 @@ const Card = (props: Product) => {
           material: props.data.material,
           price: props.data.price,
           description: props.data.description,
-          availability: props.data.availability,
+          sort: props.data.sort,
           photos: props.data.photos,
         },
       }}

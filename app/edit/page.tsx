@@ -10,8 +10,9 @@ interface Product {
   material: string;
   price: string;
   description: string;
-  availability: number;
+  // availability: number;
   photos: string[];
+  sort: number | "";
 }
 async function getProducts() {
   const querySnpshot = await getDocs(collection(db, "products"));
@@ -26,7 +27,7 @@ async function getProducts() {
       description: doc.data().description,
       id: doc.id,
       price: doc.data().price,
-      availability: doc.data().availability,
+      sort: doc.data().sort,
       photos: doc.data().photos,
     });
   });

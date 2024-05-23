@@ -10,7 +10,7 @@ const about = () => {
       <Navbar />
       <div className="flex justify-center flex-col items-center">
         <div className="z-10 lg:w-4/6 w-5/6 lg:h-[50vh]  font-mono text-sm flex flex-col justify-center gap-5 bg-gray-100 rounded-md p-6">
-          <span className="text-xl font-bold font-contractica-medium">
+          <span className="text-xl font-bold font-contractica-medium text-center  ">
             ჩვენს შესახებ
           </span>
           <span className="text-base font-contractica-regular text-center  block ">

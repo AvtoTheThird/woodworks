@@ -12,8 +12,9 @@ interface ProductFormData {
   price: string;
   id: string;
   description: string;
-  availability: number | "";
+  // availability: number | "";
   photos: FileList | null;
+  sort: number | "";
 }
 
 const initialFormData: ProductFormData = {
@@ -22,8 +23,9 @@ const initialFormData: ProductFormData = {
   price: "",
   id: "",
   description: "",
-  availability: "",
+  // availability: "",
   photos: null,
+  sort: "",
 };
 
 const ProductForm: React.FC = () => {
@@ -91,7 +93,7 @@ const ProductForm: React.FC = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="productName" className="block mb-1">
-              Product Name:
+              სახელი:
             </label>
             <input
               type="text"
@@ -105,7 +107,7 @@ const ProductForm: React.FC = () => {
           </div>
           <div>
             <label htmlFor="material" className="block mb-1">
-              Material:
+              მასალა:
             </label>
             <input
               type="text"
@@ -119,7 +121,7 @@ const ProductForm: React.FC = () => {
           </div>
           <div>
             <label htmlFor="price" className="block mb-1">
-              price:
+              ფასი:
             </label>
             <input
               type="text"
@@ -133,7 +135,7 @@ const ProductForm: React.FC = () => {
           </div>
           <div>
             <label htmlFor="description" className="block mb-1">
-              Description:
+              აღწერა:
             </label>
             <textarea
               id="description"
@@ -144,9 +146,9 @@ const ProductForm: React.FC = () => {
               required
             />
           </div>
-          <div>
+          {/* <div>
             <label htmlFor="availability" className="block mb-1">
-              Availability:
+              :
             </label>
             <input
               type="number"
@@ -157,10 +159,22 @@ const ProductForm: React.FC = () => {
               className=" w-full bg-slate-500  border-gray-300 rounded-md px-3 py-2 shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset]"
               required
             />
+          </div> */}
+          <div>
+            <label htmlFor="sort" className="block mb-1">
+              სორტი
+            </label>
+            <input
+              type="text"
+              name="sort"
+              value={formData.sort}
+              onChange={handleChange}
+              className=" w-full bg-slate-500  border-gray-300 rounded-md px-3 py-2 shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset]"
+            />
           </div>
           <div>
             <label htmlFor="photos" className="block mb-1">
-              Photos:
+              ფოტოები:
             </label>
             <input
               type="file"
@@ -172,6 +186,7 @@ const ProductForm: React.FC = () => {
               required
             />
           </div>
+
           <button
             type="submit"
             className="bg-blue-900 text-white px-4 py-2 rounded-md hover:bg-blue-600"
