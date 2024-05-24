@@ -33,7 +33,7 @@ const productDetails = ({
             მასალა: {searchParams.material}
           </h2>
           <h2 className="text-gray-800 text-lg mb-2 pb-5">
-            ფასი: {searchParams.price}
+            ფასი: {searchParams.price}₾
           </h2>
           <p className="text-gray-700 text-base pb-5  break-words">
             აღწერა: {searchParams.description}

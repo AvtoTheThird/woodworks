@@ -7,10 +7,10 @@ export default function Home() {
     <main className="flex flex-col items-center justify-between ">
       <title>ხონჩა</title>
       <Navbar />
-      <section className=" flex justify-center flex-row gap-6  bg-slate-300 min-w-full relative">
+      <section className="overflow-hidden flex justify-center flex-row gap-6  bg-slate-300 min-w-full relative">
         <img
-          className="w-full h-[36rem] object-cover relative blur-sm  overflow-hidden"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxWwMSrFJJQDGyHR-k_p4dRfTOn3xQV5U4xw&usqp=CAU"
+          className="w-full h-[36rem] object-cover relative blur-sm   "
+          src="1.jpg"
           alt=""
         />
         <div className="absolute inset-0 flex justify-center items-center flex-col ">
