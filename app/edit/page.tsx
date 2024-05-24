@@ -19,8 +19,6 @@ async function getProducts() {
 
   const data: Product[] = [];
   querySnpshot.forEach((doc) => {
-    console.log(doc);
-
     data.push({
       productName: doc.data().productName,
       material: doc.data().material,
@@ -37,7 +35,6 @@ async function getProducts() {
 
 function page() {
   const [products, setProducts] = React.useState<Product[]>([]);
-  console.log(products);
 
   useEffect(() => {
     async function fetchData() {
@@ -46,6 +43,8 @@ function page() {
     }
     fetchData();
   }, []);
+  console.log(products);
+
   return (
     <main className="flex flex-col items-center justify-start ">
       <Navbar />

@@ -59,3 +59,6 @@
   src: url("../public/contractica-fonts/TBCContracticaCAPS-Regular.ttf")
     format("truetype");
 }
+* {
+  white-space: pre-wrap;
+}

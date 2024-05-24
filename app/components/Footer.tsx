@@ -1,10 +1,7 @@
 "use client";
 import React from "react";
-import xoncha from "../../public/logo.svg";
 import Link from "next/link";
 import Image from "next/image";
-
-console.log("xoncha", xoncha);
 
 function Footer() {
   return (

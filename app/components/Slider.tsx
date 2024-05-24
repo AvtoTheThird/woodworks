@@ -1,9 +1,11 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { storage } from "../firebase";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
 
 const ImageCarousel = () => {
   const settings = {
@@ -35,45 +37,35 @@ const ImageCarousel = () => {
     ],
   };
 
+  const [images, setImages] = React.useState<string[]>([]);
+
+  const fetchImageUrls = async () => {
+    const imageUrls = [];
+    const listRef = ref(storage, "landing-images/"); // Replace 'images/' with your folder path
+
+    try {
+      const res = await listAll(listRef);
+      const promises = res.items.map((itemRef) => getDownloadURL(itemRef));
+      const urls = await Promise.all(promises);
+      imageUrls.push(...urls);
+
+      setImages(imageUrls);
+    } catch (error) {
+      console.error("Error fetching image URLs:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchImageUrls();
+  }, []);
   return (
     <div className="w-full overflow-hidden py-5">
       <Slider {...settings}>
-        <div>
-          <img
-            src="https://www.woodenearth.com/cdn/shop/articles/handmade-wooden-plates_1024x1024.png?v=1676902772"
-            alt="Image 1"
-            className="w-full h-auto px-2"
-          />
-        </div>
-        <div>
-          <img
-            src="https://www.woodenearth.com/cdn/shop/articles/handmade-wooden-plates_1024x1024.png?v=1676902772"
-            alt="Image 2"
-            className="w-full h-auto px-2"
-          />
-        </div>
-        <div>
-          <img
-            src="https://www.woodenearth.com/cdn/shop/articles/handmade-wooden-plates_1024x1024.png?v=1676902772"
-            alt="Image 3"
-            className="w-full h-auto px-2"
-          />
-        </div>
-        <div>
-          <img
-            src="https://www.woodenearth.com/cdn/shop/articles/handmade-wooden-plates_1024x1024.png?v=1676902772"
-            alt="Image 4"
-            className="w-full h-auto px-2"
-          />
-        </div>
-        <div>
-          <img
-            src="https://www.woodenearth.com/cdn/shop/articles/handmade-wooden-plates_1024x1024.png?v=1676902772"
-            alt="Image 5"
-            className="w-full h-auto px-2"
-          />
-        </div>
-        {/* Add more images as needed */}
+        {images.map((image, index) => (
+          <div key={index}>
+            <img src={image} alt="Image" className="w-full h-auto px-2" />
+          </div>
+        ))}
       </Slider>
     </div>
   );

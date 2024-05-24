@@ -2,20 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import ImageSelector from "../components/ImageSelector";
-import { database } from "../firebase";
-import {
-  collection,
-  addDoc,
-  updateDoc,
-  doc,
-  getDoc,
-  setDoc,
-} from "firebase/firestore";
+
+import { doc, setDoc, deleteDoc } from "firebase/firestore";
 import { db } from "../firebase";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { storage } from "../firebase";
-import { update } from "firebase/database";
-import firebase from "firebase/compat/app";
+
 const page = ({
   searchParams,
 }: {
@@ -65,6 +55,22 @@ const page = ({
       const documentRef = doc(db, path);
       await setDoc(documentRef, data);
       alert("წარმატებით ჩასწროდა");
+    } catch (err) {
+      console.log(err);
+      alert("რაღაცა ნიტოა");
+    }
+  };
+  const handleDelete = async (event: any) => {
+    event.preventDefault();
+    await deleteFunction(`products/${data.id}`);
+  };
+  const deleteFunction = async (path: any) => {
+    try {
+      const documentRef = doc(db, path);
+
+      await deleteDoc(documentRef).then(() => {
+        alert("წარმატებით წაიშალა");
+      });
     } catch (err) {
       console.log(err);
       alert("რაღაცა ნიტოა");
@@ -132,12 +138,20 @@ const page = ({
               }
             />
           </h2>
-          <button
-            type="submit"
-            className="bg-blue-900 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-          >
-            ჩასწრება
-          </button>
+          <div className="flex flex-row gap-10 items-center ">
+            <button
+              type="submit"
+              className="bg-blue-900 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+            >
+              ჩასწრება
+            </button>
+            <button
+              onClick={handleDelete}
+              className="bg-red-900 text-white px-4 py-2 rounded-md hover:bg-red-600"
+            >
+              წაშლა
+            </button>
+          </div>
         </div>
       </form>
     </main>

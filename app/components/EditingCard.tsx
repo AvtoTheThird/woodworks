@@ -8,6 +8,7 @@ interface Product {
     price: string;
     description: string;
     photos: string[];
+    sort: number | "";
   };
 }
 
@@ -22,7 +23,7 @@ const Card = (props: Product) => {
           material: props.data.material,
           price: props.data.price,
           description: props.data.description,
-
+          sort: props.data.sort,
           photos: props.data.photos,
         },
       }}
@@ -42,7 +43,7 @@ const Card = (props: Product) => {
             <h4>ფასი: {props.data.price}₾</h4>
           </div>
           <button className=" h-10 w-20 text-white rounded-md bg-slate-500 ">
-            <button>ჩასწორება</button>
+            ჩასწორება
           </button>
         </div>
       </div>
