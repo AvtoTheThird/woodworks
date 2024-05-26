@@ -59,7 +59,12 @@ function page() {
   return (
     <main className="flex flex-col items-center justify-between h-screen">
       <title>კონტაქტი</title>
-
+      <meta name="description" content="ხონჩას საკონტაქტო ინფორმაცია" />
+      <meta
+        name="keywords"
+        content="ხონჩას საკონტაქტო ინფორმაცია, ხელნაკეთი, ხის ხელნაკეთი, ხის ხელნაკეთი ნივთები, საჩუქარი, სასაჩუქრე, ხონჩა, xoncha, handmade, ხონჩა საჩუქარი, ხონჩა სასაჩუქრე, ჩარხი, საჩარხი დაზგა, გამოჩარხული ნივთები"
+      />
+      <meta name="author" content="Your Name" />
       <Navbar />
 
       <div className="text-gray-800 z-10 lg:w-4/6 w-5/6 items-center h-auto justify-evenly font-mono text-sm lg:flex lg:h-full bg-gray-100 rounded-md ">

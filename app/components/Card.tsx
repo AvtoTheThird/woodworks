@@ -32,7 +32,7 @@ const Card = (props: Product) => {
         <img
           className="h-[200px] object-cover"
           src={props.data?.photos[0]}
-          alt=""
+          alt={"ხის " + props.data.productName}
         />
         <div className="flex justify-between items-center">
           <div>
@@ -43,7 +43,7 @@ const Card = (props: Product) => {
             <h4>ფასი: {props.data.price}₾</h4>
           </div>
           <button className="p-3 h-10 w-14 text-white rounded-md bg-slate-500 ">
-            <button>მეტი</button>
+            მეტი
           </button>
         </div>
       </div>

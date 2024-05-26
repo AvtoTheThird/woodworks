@@ -6,6 +6,21 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between ">
       <title>ხონჩა</title>
+      <meta
+        name="description"
+        content="ხის ხელნაკეთი ნივთების ონლაინ მაღაზია
+        მაღალი ხარისხის ხისგან დამზადებული ჩვენი პროდუქცია არა მხოლოდ ფუნქციონალურია, არამედ ასახავს მასალის ბუნებრივ სილამაზეს"
+      />
+      <meta
+        name="keywords"
+        content="ხელნაკეთი, ხის ხელნაკეთი, ხის ხელნაკეთი ნივთები, საჩუქარი, სასაჩუქრე, ხონჩა, xoncha, handmade, ხონჩა საჩუქარი, ხონჩა სასაჩუქრე, ჩარხი, საჩარხი დაზგა, გამოჩარხული ნივთები"
+      />
+      <meta name="author" content="Xoncha" />
+      <meta
+        property="og:title"
+        content="ხის ხელნაკეთი ნივთების ონლაინ მაღაზია - Xoncha"
+      />
+
       <Navbar />
       <section className="overflow-hidden flex justify-center flex-row gap-6  bg-slate-300 min-w-full relative">
         <img
@@ -18,10 +33,6 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900   font-contractica-medium">
               ხის ხელნაკეთი ნივთების ონლაინ მაღაზია
             </h1>
-            {/* <h2 className="text-2xl md:text-3xl lg:w-[1200px] lg:text-3xl font-semibold text-gray-800 leading-snug mb-4 font-contractica-medium">
-                მაღალი ხარისხის ხისგან დამზადებული ჩვენი პროდუქცია არა მხოლოდ
-                ფუნქციონალურია, არამედ ასახავს მასალის ბუნებრივ სილამაზეს
-              </h2> */}
           </div>
           <Link
             href="/store"
