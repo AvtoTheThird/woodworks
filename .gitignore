@@ -19,7 +19,7 @@
 # misc
 .DS_Store
 *.pem
-
+app/firebase.tsx
 # debug
 npm-debug.log*
 yarn-debug.log*

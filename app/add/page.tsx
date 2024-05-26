@@ -5,12 +5,11 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { storage } from "../firebase";
-import { nanoid } from "nanoid";
+import { push } from "firebase/database";
 interface ProductFormData {
   productName: string;
   material: string;
   price: string;
-  id: string;
   description: string;
   // availability: number | "";
   photos: FileList | null;
@@ -21,7 +20,6 @@ const initialFormData: ProductFormData = {
   productName: "",
   material: "",
   price: "",
-  id: "",
   description: "",
   // availability: "",
   photos: null,
@@ -52,24 +50,26 @@ const ProductForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // console.log(formData.photos);
     try {
       const Urls = formData.photos ? await uploadImages(formData.photos) : [];
-      // console.log(Urls);
+
       const docRef =
         Urls.length > 0
           ? await addDoc(collection(db, "products"), {
               ...formData,
               photos: Urls,
-              id: nanoid(10),
             })
           : null;
+
+      if (docRef) {
+        console.log("Document written with ID: ", docRef.id);
+      }
     } catch (error) {
       console.error("Error adding document: ", error);
     }
+
     setFormData(initialFormData);
   };
-
   const uploadImages = async (files: FileList) => {
     const imageUrls: string[] = [];
     for (const file of Array.from(files)) {
